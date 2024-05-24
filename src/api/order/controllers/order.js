@@ -59,8 +59,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
 			},
 			line_items: lineItems,
 			mode: 'payment',
-			success_url: `${process.env.CLIENT_URL}/payments/success`,
-			cancel_url: `${process.env.CLIENT_URL}/payments/failed`,
+			success_url: `${process.env.CLIENT_URL}/#/payments/success`,
+			cancel_url: `${process.env.CLIENT_URL}/#/payments/failed`,
 		  });
 
 		  await strapi.entityService.create('api::order.order', {
